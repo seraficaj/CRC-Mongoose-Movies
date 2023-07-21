@@ -35,7 +35,10 @@ app.use(methodOverride('_method'))
 app.use(session({
   secret: process.env.SECRET,
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true,
+  cookie : {
+    maxAge:(1000 * 60 * 100)
+}      
 }))
 
 // PASSPORT MIDDLEWARE
