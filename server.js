@@ -34,7 +34,7 @@ app.use(methodOverride('_method'))
 // middleware for generating sessions and signing them with .env SECRET
 app.use(session({
   secret: process.env.SECRET,
-  resave: false,
+  resave: true,
   saveUninitialized: true,
   cookie : {
     maxAge:(1000 * 60 * 100)
